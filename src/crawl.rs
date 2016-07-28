@@ -83,8 +83,8 @@ pub fn load_url_facts() -> Result<UrlFacts> {
 
 fn initial_urls_from_plan(plan: &Battleplan) -> Vec<Url> {
     let mut urls = Vec::new();
-    for campaign in &plan.campaigns {
-        match Url::parse(&campaign.tracking_link) {
+    for goal in &plan.goals {
+        match Url::parse(&goal.tracking_link) {
             Ok(url) => urls.push(url),
             Err(_) => (/* bogus link */),
         }

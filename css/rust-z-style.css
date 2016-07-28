@@ -1,6 +1,6 @@
 html {
     --theme-color: red;
-    --campaign-color: green;
+    --goal-color: green;
     --problem-color: purple;
     --team-color: blue;
     --release-color: cyan;
@@ -36,8 +36,8 @@ div#section-themes > h2 {
     border-color: var(--theme-color);
 }
 
-div#section-campaigns > h2 {
-    border-color: var(--campaign-color);
+div#section-goals > h2 {
+    border-color: var(--goal-color);
 }
 
 div#section-problems > h2 {
@@ -94,8 +94,8 @@ h3 .tag {
     border-color: var(--theme-color);
 }
 
-.tag-campaign {
-    border-color: var(--campaign-color);
+.tag-goal {
+    border-color: var(--goal-color);
 }
 
 .tag-problem {

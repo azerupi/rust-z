@@ -9,7 +9,7 @@ layout: incredible
   <span id="scene-overview" class="scene">overview</span>
   &nbsp;|&nbsp;
   <span class="scene">themes</span>
-  <span class="scene">campaigns</span>
+  <span class="scene">goals</span>
   <span class="scene">problems</span>
   <span class="scene">teams</span>
   <span class="scene">releases</span>
@@ -66,26 +66,26 @@ layout: incredible
       <div>{{ theme.pitch | markdownify }}</div>
 
       <div>
-        {% for campaign in site.data.campaigns %}
-          {% if campaign.theme != theme.id %}
+        {% for goal in site.data.goals %}
+          {% if goal.theme != theme.id %}
             {% continue %}
           {% endif %}
 
-          {% if campaign.top %}
+          {% if goal.top %}
             {% assign class = "top" %}
           {% else %}
             {% assign class = "bottom" %}
           {% endif %}
 
             <div class="{{class}}">
-              {% include tag.html type="campaign" id=campaign.id %}
-              <em>{{campaign.goal}}</em>.
-              {% include tag.html type="release" id=campaign.release %}
+              {% include tag.html type="goal" id=goal.id %}
+              <em>{{goal.goal}}</em>.
+              {% include tag.html type="release" id=goal.release %}
               <div class="details">
-                <div>{{campaign.pitch | markdownify }}</div>
-                <div>Tracking link: <a href="{{campaign.tracking-link}}">{{campaign.tracking-link}}</a></div>
+                <div>{{goal.pitch | markdownify }}</div>
+                <div>Tracking link: <a href="{{goal.tracking-link}}">{{goal.tracking-link}}</a></div>
               </div>
-              {% include campaign-details.html id=campaign.id %}
+              {% include goal-details.html id=goal.id %}
             </div>
         
 
@@ -102,12 +102,12 @@ layout: incredible
 
 </div>
 
-<div id="section-campaigns">
+<div id="section-goals">
 
-  <h2>Campaigns</h2>
+  <h2>Goals</h2>
 
   <p class="explain-section">
-    Campaigns are lorem ipsum dolor sit amet, consectetur
+    Goals are lorem ipsum dolor sit amet, consectetur
     adipiscing elit. Proin tristique leo ac ipsum finibus
     egestas. Cras elit tortor, ornare sed arcu non, laoreet egestas
     justo. Vestibulum a pulvinar nisl. Nullam condimentum, quam in
@@ -121,33 +121,33 @@ layout: incredible
     consectetur adipiscing elit.
   </p>
 
-  {% for campaign in site.data.campaigns %}
+  {% for goal in site.data.goals %}
 
-    {% if campaign.top %}
+    {% if goal.top %}
       {% assign top-class = "top" %}
     {% else %}
       {% assign top-class = "bottom" %}
     {% endif %}
 
-    <div id="campaign-{{campaign.id}}"
-        class="campaign theme-{{campaign.theme}} {{top-class}}">
+    <div id="goal-{{goal.id}}"
+        class="goal theme-{{goal.theme}} {{top-class}}">
       <h3>
-        {{campaign.goal}}
-        {% include tag.html type="campaign" id=campaign.id %} <-- click for details
+        {{goal.goal}}
+        {% include tag.html type="goal" id=goal.id %} <-- click for details
       </h3>
-      <div>{{campaign.pitch | markdownify }}</div>
-      <div>Tracking link: <a href="{{campaign.tracking-link}}">{{campaign.tracking-link}}</a></div>
-      {% include campaign-details.html id=campaign.id %}
+      <div>{{goal.pitch | markdownify }}</div>
+      <div>Tracking link: <a href="{{goal.tracking-link}}">{{goal.tracking-link}}</a></div>
+      {% include goal-details.html id=goal.id %}
 
       <div>
-        {% include tag.html type="theme" id=campaign.theme %}
+        {% include tag.html type="theme" id=goal.theme %}
         {% for theme in site.data.themes %}
-          {% if theme.id != campaign.theme %}
+          {% if theme.id != goal.theme %}
             {% continue %}
           {% endif %}
           {% include tag.html type="team" id=theme.team %}
         {% endfor %}
-        {% include tag.html type="release" id=campaign.release %}
+        {% include tag.html type="release" id=goal.release %}
       </div>
     </div>
 
@@ -231,15 +231,15 @@ layout: incredible
           {% endif %}
           {% include tag.html type="theme" id=theme.id %}
         {% endfor %}
-        {% for campaign in site.data.campaigns %}
+        {% for goal in site.data.goals %}
           {% for theme in site.data.themes %}
             {% if theme.team != team.id %}
               {% continue %}
             {% endif %}
-            {% if campaign.theme != theme.id %}
+            {% if goal.theme != theme.id %}
               {% break %}
             {% endif %}
-            {% include tag.html type="campaign" id=campaign.id %}
+            {% include tag.html type="goal" id=goal.id %}
           {% endfor %}
         {% endfor %}
         {% for problem in site.data.problems %}
@@ -270,18 +270,18 @@ layout: incredible
     {% if release.future %}
       <div id="release-{{release.id | replace: ".", "_" }}" class="release">
         {% include tag.html type="release" id=release.id %}
-        {% for campaign in site.data.campaigns %}
-          {% if campaign.release != release.id %}
+        {% for goal in site.data.goals %}
+          {% if goal.release != release.id %}
             {% continue %}
           {% endif %}
-          {% if campaign.top %}
+          {% if goal.top %}
             {% assign class = "top" %}
           {% else %}
             {% assign class = "bottom" %}
           {% endif %}
           <div class="{{class}}">
-            {% include tag.html type="campaign" id=campaign.id %}
-            <em>{{campaign.goal}}</em>.
+            {% include tag.html type="goal" id=goal.id %}
+            <em>{{goal.goal}}</em>.
           </div>
         {% endfor %}
       </div>
@@ -308,7 +308,7 @@ layout: incredible
 <div id="section-valhalla">
   <h2>Hall of Heroes</h2>
 
-  This is where we archive completed campaigns. Find some way to include the
+  This is where we archive completed goals. Find some way to include the
   names of everybody who participated.
 </div>
 
@@ -325,9 +325,9 @@ layout: incredible
       <span class="tag tag-theme">theme</span>
       tags.
 
-    <li><em>Campaigns</em> are ...
-      Campaigns are indicated with the powerful green
-      <span class="tag tag-campaign">campaign</span>
+    <li><em>Goals</em> are ...
+      Goals are indicated with the powerful green
+      <span class="tag tag-goal">goal</span>
       tags.
 
     <li><em>Problems</em> is ...

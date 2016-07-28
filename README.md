@@ -34,11 +34,12 @@ an easily-digestable format.
 
 Fundamentally, this tool helps organize the *tracking issues* already
 produced by the Rust development process. Tracking issues of strategic
-importance are registered with the tool as *campaigns*. The tool
-automatically derives important data about the progress of each
-campaign and presents it to the user in a way that is easier to
-understand than attempting to discover the same information through
-the usual GitHub, etc. UI.
+importance are registered with the tool as *goals*, and they are
+stated as concrete, limited deliverables. The tool automatically
+derives important data about the progress of each goal and
+presents it to the user in a way that is easier to understand than
+attempting to discover the same information through the usual GitHub,
+etc. UI.
 
 There are three major components to this:
 

@@ -112,20 +112,20 @@ fn validate_plan() -> Result<()> {
 fn load_plan() -> Result<Battleplan> {
     let data_dir = PathBuf::from(DATA_DIR);
     let themes = yaml_from_file(&data_dir.join("themes.yml"))?;
-    let campaigns = yaml_from_file(&data_dir.join("campaigns.yml"))?;
+    let goals = yaml_from_file(&data_dir.join("goals.yml"))?;
     let problems = yaml_from_file(&data_dir.join("problems.yml"))?;
     let teams = yaml_from_file(&data_dir.join("teams.yml"))?;
     let releases = yaml_from_file(&data_dir.join("releases.yml"))?;
 
     let themes = themes_from_yaml(themes)?;
-    let campaigns = campaigns_from_yaml(campaigns)?;
+    let goals = goals_from_yaml(goals)?;
     let problems = problems_from_yaml(problems)?;
     let teams = teams_from_yaml(teams)?;
     let releases = releases_from_yaml(releases)?;
 
     Ok(Battleplan {
         themes: themes,
-        campaigns: campaigns,
+        goals: goals,
         problems: problems,
         teams: teams,
         releases: releases,
@@ -140,7 +140,7 @@ fn yaml_from_file(path: &Path) -> Result<Vec<Yaml>> {
 
 struct Battleplan {
     themes: Vec<Theme>,
-    campaigns: Vec<Campaign>,
+    goals: Vec<Goal>,
     problems: Vec<Problem>,
     teams: Vec<Team>,
     releases: Vec<Release>,
@@ -154,7 +154,7 @@ struct Theme {
     pitch: String
 }
 
-struct Campaign {
+struct Goal {
     id: String,
     goal: String,
     pitch: String,
@@ -195,21 +195,21 @@ impl Battleplan {
                       theme.id, theme.team);
             }
         }
-        for campaign in &self.campaigns {
-            if !self.themes.iter().any(|x| x.id == campaign.theme) {
+        for goal in &self.goals {
+            if !self.themes.iter().any(|x| x.id == goal.theme) {
                 good = false;
-                verr!("campaign {} mentions bogus theme '{}'",
-                      campaign.id, campaign.theme);
+                verr!("goal {} mentions bogus theme '{}'",
+                      goal.id, goal.theme);
             }
-            if !self.releases.iter().any(|x| x.id == campaign.release) {
+            if !self.releases.iter().any(|x| x.id == goal.release) {
                 good = false;
-                verr!("campaign {} mentions bogus release '{}'",
-                      campaign.id, campaign.release);
+                verr!("goal {} mentions bogus release '{}'",
+                      goal.id, goal.release);
             }
 
-            if campaign.tracking_link.starts_with("http://") {
-                verr!("campaign {} has https tracking link: {}",
-                      campaign.id, campaign.tracking_link);
+            if goal.tracking_link.starts_with("http://") {
+                verr!("goal {} has https tracking link: {}",
+                      goal.id, goal.tracking_link);
             }
         }
         for problem in &self.problems {
@@ -346,24 +346,24 @@ fn themes_from_yaml(y: Vec<Yaml>) -> Result<Vec<Theme>> {
     Ok(res)
 }
 
-fn campaigns_from_yaml(y: Vec<Yaml>) -> Result<Vec<Campaign>> {
+fn goals_from_yaml(y: Vec<Yaml>) -> Result<Vec<Goal>> {
     let mut res = Vec::new();
-    let y = root_yaml_to_vec(&y, "campaign")?;
+    let y = root_yaml_to_vec(&y, "goal")?;
 
     for (i, y) in y.into_iter().enumerate() {
-        let mut map = try_as_map!(y, "campaign", i);
+        let mut map = try_as_map!(y, "goal", i);
 
-        let id = try_lookup_string!(map, "id", "campaign", i);
-        let goal = try_lookup_string!(map, "goal", "campaign", id);
-        let top = try_lookup_bool!(map, "top", "campaign", id);
-        let pitch = try_lookup_string!(map, "pitch", "campaign", id);
-        let theme = try_lookup_string!(map, "theme", "campaign", id);
-        let tracking_link = try_lookup_string!(map, "tracking-link", "campaign", id);
-        let release = try_lookup_string!(map, "release", "campaign", id);
+        let id = try_lookup_string!(map, "id", "goal", i);
+        let goal = try_lookup_string!(map, "goal", "goal", id);
+        let top = try_lookup_bool!(map, "top", "goal", id);
+        let pitch = try_lookup_string!(map, "pitch", "goal", id);
+        let theme = try_lookup_string!(map, "theme", "goal", id);
+        let tracking_link = try_lookup_string!(map, "tracking-link", "goal", id);
+        let release = try_lookup_string!(map, "release", "goal", id);
 
-        warn_extra_fields(map, "campaign", &id);
+        warn_extra_fields(map, "goal", &id);
 
-        res.push(Campaign {
+        res.push(Goal {
             id: id,
             goal: goal,
             top: top,

@@ -3,18 +3,18 @@
 # These are the things we're promising our users in upcoming versions
 # of Rust. Each one is a specific measurable deliverable with an
 # associated tracking issue. The tracking issue may link to other
-# issues, and thus campaigns may require multiple steps to complete.
-# Some campaigns correspond directly to features in the feature
+# issues, and thus goals may require multiple steps to complete.
+# Some goals correspond directly to features in the feature
 # pipeline.
 #
-# Like battleplans, 'top' campaigns are the ones we are trying to surface
-# and sell. Like battleplans, campaigns should be exciting calls to action.
+# Like battleplans, 'top' goals are the ones we are trying to surface
+# and sell. Like battleplans, goals should be exciting calls to action.
 # People should want these things and want to contribute to their success.
 #
 # Potential additional fields: associated-rfcs/issues/etc, contributors.
 
 
-## cross campaigns
+## cross goals
 
 -
   id: rustup-ndk-android
@@ -109,7 +109,7 @@
   tracking-link: https://github.com/rust-lang/rust/issues/33205
   release: TBD
 
-## tools campaigns
+## tools goals
 
 -
   id: rustfmt-defaults
@@ -258,7 +258,7 @@
   tracking-link: https://github.com/rust-lang/rust/issues/34511
   release: TBD
 
-## compiler campaigns
+## compiler goals
 
 -
   id: mir-trans
@@ -340,7 +340,7 @@
   tracking-link: https://github.com/rust-lang/rust/issues/34827
   release: TBD
 
-## other campaigns
+## other goals
 
 -
   id: serde-on-stable

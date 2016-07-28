@@ -30,8 +30,8 @@
     a "mid-level" IR, or "MIR". The MIR is a representation of Rust
     source code that is easier to reason about than the full Rust
     syntax, and will enable a number of improvements, including
-    [simpler translation](#campaign-mir-trans),
-    [incremental-compilation](#campaign-incremental-compilation), and
+    [simpler translation](#goal-mir-trans),
+    [incremental-compilation](#goal-incremental-compilation), and
     new optimizations.
 
 -
@@ -237,7 +237,7 @@
 
 -
   id: TODO
-  name: Campaigns without themes can go here temporarily
+  name: Goals without themes can go here temporarily
   team: core
   pitch: >
     Pellentesque habitant morbi tristique senectus et netus et

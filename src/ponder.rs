@@ -9,7 +9,7 @@ use std::ops::Deref;
 use std::convert::TryFrom;
 
 #[derive(Clone, Debug, Serialize, Deserialize, Eq, Ord, PartialEq, PartialOrd, Hash)]
-struct Campaign {
+struct Goal {
     rfc: Option<RfcInfo>,
     fcp: Option<Url>,
     completed: bool,
@@ -48,12 +48,12 @@ pub fn ponder() -> Result<()> {
 
     let ref url_facts = load_url_facts()?;
 
-    let campaign_urls = campaign_urls_from_plan(&plan);
+    let goal_urls = goal_urls_from_plan(&plan);
 
-    let mut campaigns = HashMap::new();
+    let mut goals = HashMap::new();
     
-    for (ref campaign_id, ref url) in campaign_urls {
-        info!("calculating campaign for {}", campaign_id);
+    for (ref goal_id, ref url) in goal_urls {
+        info!("calculating goal for {}", goal_id);
 
         if url_facts.get(url).is_none() {
             warn!("no crawl info for {}", url);
@@ -64,7 +64,7 @@ pub fn ponder() -> Result<()> {
         let last_updated = get_last_updated(url_facts, url);
         let pipeline_status = get_pipeline_status(url_facts, url);
 
-        let campaign = Campaign {
+        let goal = Goal {
             rfc: rfc_info,
             fcp: None,
             completed: false,
@@ -72,19 +72,19 @@ pub fn ponder() -> Result<()> {
             pipeline_status: pipeline_status,
         };
 
-        campaigns.insert(campaign_id.to_string(), campaign);
+        goals.insert(goal_id.to_string(), goal);
     }
 
-    super::write_yaml("campaigns", campaigns)?;
+    super::write_yaml("goals", goals)?;
 
     Ok(())
 }
 
-fn campaign_urls_from_plan(plan: &Battleplan) -> Vec<(String, Url)> {
+fn goal_urls_from_plan(plan: &Battleplan) -> Vec<(String, Url)> {
     let mut cs = Vec::new();
-    for campaign in &plan.campaigns {
-        match Url::parse(&campaign.tracking_link) {
-            Ok(url) => cs.push((campaign.id.clone(), url)),
+    for goal in &plan.goals {
+        match Url::parse(&goal.tracking_link) {
+            Ok(url) => cs.push((goal.id.clone(), url)),
             Err(_) => (/* bogus link */),
         }
     }
@@ -92,12 +92,12 @@ fn campaign_urls_from_plan(plan: &Battleplan) -> Vec<(String, Url)> {
     cs
 }
 
-fn get_rfc_info(url_facts: &UrlFacts, campaign_url: &Url) -> Option<RfcInfo> {
-    if url_facts.get(campaign_url).is_none() {
+fn get_rfc_info(url_facts: &UrlFacts, goal_url: &Url) -> Option<RfcInfo> {
+    if url_facts.get(goal_url).is_none() {
         return None;
     }
 
-    let facts = &url_facts[campaign_url];
+    let facts = &url_facts[goal_url];
     let rfc_number;
     let completed;
 
@@ -110,7 +110,7 @@ fn get_rfc_info(url_facts: &UrlFacts, campaign_url: &Url) -> Option<RfcInfo> {
         }
 
         if rfc_numbers.len() > 1 {
-            warn!("multiple RFC candidates for {}: {:?}", campaign_url, rfc_numbers);
+            warn!("multiple RFC candidates for {}: {:?}", goal_url, rfc_numbers);
         }
 
         rfc_number = rfc_numbers[0];
@@ -130,12 +130,12 @@ fn get_rfc_info(url_facts: &UrlFacts, campaign_url: &Url) -> Option<RfcInfo> {
     })
 }
 
-fn get_last_updated(url_facts: &UrlFacts, campaign_url: &Url) -> Option<(String, u32)> {
-    if url_facts.get(campaign_url).is_none() {
+fn get_last_updated(url_facts: &UrlFacts, goal_url: &Url) -> Option<(String, u32)> {
+    if url_facts.get(goal_url).is_none() {
         return None;
     }
 
-    let facts = &url_facts[campaign_url];
+    let facts = &url_facts[goal_url];
 
     // TODO: This should probably also consider sub-tasks, and certain other
     // related URLs as part of the last updated time
