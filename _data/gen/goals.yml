@@ -4,7 +4,7 @@
   "fcp": ~
   "last_updated": 
     - "2016-07-15"
-    - 8
+    - 13
   "pipeline_status": 
     "completed": 
       - 4
@@ -49,7 +49,7 @@
   "fcp": ~
   "last_updated": 
     - "2016-03-27"
-    - 119
+    - 123
   "pipeline_status": 
     "completed": 
       - 1
@@ -73,7 +73,7 @@
   "fcp": ~
   "last_updated": 
     - "2016-07-20"
-    - 3
+    - 8
   "pipeline_status": 
     "completed": 
       - 4
@@ -118,7 +118,7 @@
   "fcp": ~
   "last_updated": 
     - "2016-07-14"
-    - 9
+    - 14
   "pipeline_status": 
     "completed": 
       - 4
@@ -162,7 +162,7 @@
   "completed": false
   "fcp": ~
   "last_updated": 
-    - "2016-07-23"
+    - "2016-07-28"
     - 0
   "pipeline_status": 
     "completed": 
@@ -231,8 +231,8 @@
   "completed": false
   "fcp": ~
   "last_updated": 
-    - "2016-07-07"
-    - 16
+    - "2016-07-25"
+    - 3
   "pipeline_status": 
     "completed": 
       - 1

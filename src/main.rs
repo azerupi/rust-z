@@ -73,6 +73,7 @@ fn read_args() -> Result<Config> {
     use clap::*;
 
     let matches = App::new("Battleplan Rust Command Console")
+        .setting(AppSettings::DeriveDisplayOrder)
         .subcommand(SubCommand::with_name("check"))
         .subcommand(SubCommand::with_name("crawl"))
         .subcommand(SubCommand::with_name("ponder"))
@@ -114,20 +115,17 @@ fn load_plan() -> Result<Battleplan> {
     let themes = yaml_from_file(&data_dir.join("themes.yml"))?;
     let goals = yaml_from_file(&data_dir.join("goals.yml"))?;
     let problems = yaml_from_file(&data_dir.join("problems.yml"))?;
-    let teams = yaml_from_file(&data_dir.join("teams.yml"))?;
     let releases = yaml_from_file(&data_dir.join("releases.yml"))?;
 
     let themes = themes_from_yaml(themes)?;
     let goals = goals_from_yaml(goals)?;
     let problems = problems_from_yaml(problems)?;
-    let teams = teams_from_yaml(teams)?;
     let releases = releases_from_yaml(releases)?;
 
     Ok(Battleplan {
         themes: themes,
         goals: goals,
         problems: problems,
-        teams: teams,
         releases: releases,
     })
 }
@@ -142,7 +140,6 @@ struct Battleplan {
     themes: Vec<Theme>,
     goals: Vec<Goal>,
     problems: Vec<Problem>,
-    teams: Vec<Team>,
     releases: Vec<Release>,
 }
 
@@ -188,13 +185,6 @@ impl Battleplan {
     fn validate(&self) -> Result<()> {
         let mut good = true;
 
-        for theme in &self.themes {
-            if !self.teams.iter().any(|x| x.id == theme.team) {
-                good = false;
-                verr!("theme {} mentions bogus team '{}'",
-                      theme.id, theme.team);
-            }
-        }
         for goal in &self.goals {
             if !self.themes.iter().any(|x| x.id == goal.theme) {
                 good = false;
@@ -394,27 +384,6 @@ fn problems_from_yaml(y: Vec<Yaml>) -> Result<Vec<Problem>> {
             id: id,
             pitch: pitch,
             theme: theme,
-        });
-    }
-
-    Ok(res)
-}
-
-fn teams_from_yaml(y: Vec<Yaml>) -> Result<Vec<Team>> {
-    let mut res = Vec::new();
-    let y = root_yaml_to_vec(&y, "team")?;
-
-    for (i, y) in y.into_iter().enumerate() {
-        let mut map = try_as_map!(y, "team", i);
-
-        let id = try_lookup_string!(map, "id", "team", i);
-        let name = try_lookup_string!(map, "name", "team", id);
-
-        warn_extra_fields(map, "team", &id);
-
-        res.push(Team {
-            id: id,
-            name: name,
         });
     }
 
