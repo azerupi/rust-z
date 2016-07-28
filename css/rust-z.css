@@ -9,7 +9,7 @@ div#scene > div#section-controls {
     display: block;
 }
 
-div#scene.overview div#section-cta,
+div#scene.overview div#section-vision,
 div#scene.overview div#section-themes {
     display: block;
 }
@@ -42,7 +42,7 @@ div#scene.help div#section-help {
     display: block;
 }
 
-div#scene.all div#section-cta,
+div#scene.all div#section-vision,
 div#scene.all div#section-themes,
 div#scene.all div#section-campaigns,
 div#scene.all div#section-problems,
