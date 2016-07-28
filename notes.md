@@ -51,3 +51,12 @@
   - crates.fyi
 - homu-written-in-rust
 - crater-rewrite
+
+# battlefronts
+
+IDE integration
+Ergonomic improvement
+Cross compilation
+*not* MIR
+Compiler performance
+Incremental compilation

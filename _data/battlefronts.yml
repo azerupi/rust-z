@@ -234,32 +234,6 @@
     tincidunt turpis, sit amet fermentum nisi nunc eget elit. Donec
     vulputate ornare dolor a maximus. Maecenas mauris augue, fringilla
     quis facilisis eget, fermentum sit amet turpis.
--
-  id: linker-independence
-  name: Linker independence
-  team: tools
-  pitch: >
-    Suspendisse et augue fermentum, egestas risus in, sagittis mi. Sed
-    id bibendum ligula. Maecenas sed eleifend odio, quis eleifend
-    augue. In dapibus erat quam, at sagittis lorem volutpat vitae. In
-    vel hendrerit leo. Donec eget elit quam. Phasellus eget tortor
-    molestie, sagittis sapien eget, rhoncus eros. Cum sociis natoque
-    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-
--
-  id: infra-security
-  name: Infrastructure security
-  team: tools
-  pitch: >
-    Pellentesque habitant morbi tristique senectus et netus et
-    malesuada fames ac turpis egestas. Nam in leo sagittis, cursus
-    tellus lacinia, ullamcorper lorem. In hac habitasse platea
-    dictumst. Quisque nec ipsum sollicitudin urna euismod
-    blandit. Aliquam venenatis laoreet auctor. Nulla convallis neque
-    id nisi venenatis, tincidunt efficitur massa tristique. Nulla et
-    eros at lacus aliquet interdum. Duis facilisis eleifend ex sit
-    amet fermentum. Nulla tristique orci lacus, sed maximus leo
-    gravida at. Sed nec elementum turpis.
 
 -
   id: TODO
