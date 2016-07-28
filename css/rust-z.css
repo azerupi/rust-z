@@ -34,7 +34,7 @@ div#scene.releases div#section-releases {
     display: block;
 }
 
-div#scene.valhalla div#section-valhalla {
+div#scene.archive div#section-archive {
     display: block;
 }
 
@@ -48,7 +48,7 @@ div#scene.all div#section-goals,
 div#scene.all div#section-problems,
 div#scene.all div#section-teams,
 div#scene.all div#section-releases,
-div#scene.all div#section-valhalla,
+div#scene.all div#section-archive,
 div#scene.all div#section-help {
     display: block;
 }
