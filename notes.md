@@ -55,11 +55,10 @@
 # battlefronts
 
 IDE integration
-Ergonomic improvement
+Ergonomics and Newbie Experience
 Cross compilation
 *not* MIR
 Compiler performance
-Incremental compilation
 
 cta -> vision statement
 battlefront -> theme

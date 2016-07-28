@@ -234,7 +234,7 @@
     semper, turpis orci consectetur ipsum, in egestas arcu risus eu
     quam. Interdum et malesuada fames ac ante ipsum primis in
     faucibus.
-  theme: lang
+  theme: ergonomics
   top: true
   tracking-link: https://github.com/rust-lang/rust/issues/31436
   release: TBD
@@ -253,7 +253,7 @@
     semper, turpis orci consectetur ipsum, in egestas arcu risus eu
     quam. Interdum et malesuada fames ac ante ipsum primis in
     faucibus.
-  theme: lang
+  theme: ergonomics
   top: true
   tracking-link: https://github.com/rust-lang/rust/issues/34511
   release: TBD
@@ -274,13 +274,17 @@
     vehicula ante eu tortor imperdiet, eget viverra est
     dictum. Vivamus euismod sodales leo eget condimentum.
   top: true
-  theme: mir
+  theme: compiler-perf
   tracking-link: TODO
   release: TBD
 
 -
   id: incremental-compilation
   goal: Enable rustc to rebuild only code that has changed since the previous build
+  top: true
+  theme: compiler-perf
+  tracking-link: TODO
+  release: TBD
   pitch: >
     In a ex rutrum, mollis odio eget, sodales risus. Quisque nec
     ligula odio. Suspendisse blandit nisi vel nisl elementum
@@ -293,10 +297,6 @@
     posuere ullamcorper nec eget ante. In feugiat ut mi quis
     feugiat. Proin semper lacus feugiat neque semper, vel eleifend
     ipsum volutpat. In hendrerit efficitur velit vitae feugiat.
-  top: true
-  theme: mir
-  tracking-link: TODO
-  release: TBD
 
 ## ergonomics
 
@@ -364,3 +364,57 @@
   release: TBD
   # task https://github.com/rust-lang/rfcs/pull/1566
 
+-
+  id: book2
+  goal: Rewrite the Rust book
+  theme: TODO
+  tracking-link: TODO
+  release: TBD
+  pitch: >
+    Nam ac erat nisl. Phasellus condimentum cursus nibh a
+    pellentesque. Nullam efficitur felis in massa gravida, ut sagittis
+    justo suscipit. Praesent dignissim ut orci vel laoreet. Proin et
+    urna purus. Aenean eget dolor nec ante lobortis malesuada vel in
+    mauris. Morbi semper consectetur nibh, vitae feugiat risus
+    ullamcorper vitae. Maecenas commodo sed ante molestie
+    venenatis. Vivamus accumsan sapien at metus rutrum, at sagittis
+    nulla interdum. Proin id mauris faucibus, tempor velit sed,
+    aliquet ex. Cras turpis arcu, aliquet sed dolor eget, dapibus
+    tincidunt leo. Cras vitae ligula volutpat, lobortis odio eu,
+    pellentesque arcu. Mauris vel velit turpis. Cras pulvinar dui eget
+    quam ornare, vel dictum nunc aliquet. In at iaculis ex.
+
+-
+  id: bors-as-a-service
+  goal: Set up a new community bors-as-a-service instance
+  theme: TODO
+  tracking-link: TODO
+  release: TBD
+  pitch: >
+    Morbi libero risus, molestie non volutpat ac, laoreet in
+    est. Maecenas vitae laoreet sem. Aenean ut lectus at lectus
+    malesuada viverra quis aliquam massa. Nam vel elit semper, luctus
+    dui dictum, venenatis metus. Aliquam rhoncus felis enim, non
+    consectetur ex malesuada quis. Etiam dapibus, lacus quis tincidunt
+    aliquet, mi neque ultrices ante, nec aliquet tellus ipsum a
+    est. Sed sit amet nisi tortor. Maecenas gravida, dui at pulvinar
+    pharetra, augue ex consectetur risus, vitae pellentesque ex sem
+    vitae massa. Integer sed velit ultricies velit varius
+    pretium. Nullam quis faucibus nisi.
+
+-
+  id: rustbridge
+  goal: TODO
+  theme: TODO
+  tracking-link: TODO
+  release: TBD
+  pitch: >
+    Vestibulum rutrum ultrices mauris in suscipit. Ut at sollicitudin
+    augue, eu consequat felis. Integer lobortis gravida urna, sit amet
+    venenatis mauris volutpat a. Aliquam id augue commodo leo lobortis
+    ullamcorper a ac dolor. Sed id vulputate augue. Duis blandit
+    fermentum felis, vel vehicula lectus mollis eu. Duis laoreet
+    pretium ex eu ultricies. Mauris dictum ullamcorper augue, ut
+    tristique erat fermentum vitae. Donec quis ante nisl. Sed a
+    imperdiet dui. Aenean a eros egestas, auctor lectus nec, imperdiet
+    lorem.

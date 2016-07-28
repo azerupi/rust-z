@@ -1,11 +1,11 @@
 # Battleplan Rust
 
-A *prototype* tool for organizing the activity of The Rust Project.
+A prototype tool for organizing the activity of The Rust Project.
 
 Rust is a huge effort. There's a lot going on. But it's difficult for
 the casual observer - or even those deeply involved - to grasp the big
 picture of where Rust is going, and how it will get there. This tool
-is an attempt to improve the situation by collectiing key information
+is an attempt to create clarity by collectiing key information
 already produced by Rust's development process, and presenting it in
 an easily-digestable format.
 

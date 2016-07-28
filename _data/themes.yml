@@ -20,37 +20,19 @@
 # should focus on the most active, exciting themes, and those in
 # the most need of contributions.
 
+
+# Top themes
+
 -
-  id: mir
-  name: MIR
+  id: ergonomics
+  name: User experience improvements
   team: compiler
   top: true
   pitch: >
-    The Rust compiler is undergoing a major refactoring, to introduce
-    a "mid-level" IR, or "MIR". The MIR is a representation of Rust
-    source code that is easier to reason about than the full Rust
-    syntax, and will enable a number of improvements, including
-    [simpler translation](#goal-mir-trans),
-    [incremental-compilation](#goal-incremental-compilation), and
-    new optimizations.
-
--
-  id: lang
-  name: Language development
-  team: lang
-  top: true
-  pitch: >
-    Fusce vitae aliquam odio, vel dignissim diam. Donec eu bibendum
-    orci. Vivamus tempus elit id dolor sollicitudin viverra. Aenean
-    lacus odio, maximus a lacus pulvinar, tincidunt congue
-    ante. Maecenas ullamcorper dictum dignissim. Cras interdum enim ut
-    libero pharetra interdum. Nullam eget massa ornare, tempor arcu
-    non, ultricies arcu. Nam vitae leo a enim rutrum lobortis. Fusce
-    aliquet lacinia magna id venenatis. Sed lacinia in dolor a
-    porta. Curabitur maximus turpis non tortor accumsan
-    gravida. Praesent vitae sem hendrerit, vulputate felis et,
-    accumsan enim. Curabitur et odio ac lectus elementum
-    imperdiet. Maecenas consequat mattis lacus id vehicula.
+    A powerful language is nothing without a user-friendly compiler,
+    and Rust is a _very_ powerful language. With Rust's paradigm-shattering
+    borrowchecker there is a lot for newbies to learn, and so Rust's
+    error messages need to guide them in the right direction, etc.
 
 -
   id: cross
@@ -66,15 +48,24 @@
     target every platform under the sun.
 
 -
-  id: ergonomics
-  name: Ergonomic improvements
+  id: compiler-perf
+  name: Compiler performance
   team: compiler
   top: true
   pitch: >
-    A powerful language is nothing without a user-friendly compiler,
-    and Rust is a _very_ powerful language. With Rust's paradigm-shattering
-    borrowchecker there is a lot for newbies to learn, and so Rust's
-    error messages need to guide them in the right direction, etc.
+    Vivamus luctus dui dolor, eget congue nunc mattis eget. Aenean at
+    mi in nisi commodo rhoncus vel a arcu. Fusce condimentum augue at
+    ligula tempus fermentum. Praesent hendrerit ligula nisl, nec
+    elementum justo euismod at. Aenean lacinia leo ipsum, vitae
+    laoreet nisl rutrum et. Morbi a dolor id sem congue
+    sagittis. Vestibulum eu eros dignissim, mattis sapien ac,
+    imperdiet dui. Fusce volutpat, sem eu eleifend ornare, sapien
+    sapien congue mi, non malesuada nulla nibh sit amet
+    felis. Pellentesque pellentesque libero in velit pulvinar, vel
+    vestibulum felis iaculis. Fusce urna massa, ornare eu turpis in,
+    hendrerit ultricies leo. Suspendisse porttitor rutrum nunc. Nulla
+    consequat nunc a tristique scelerisque. Suspendisse nec sodales
+    tortor. Suspendisse iaculis tincidunt leo ac egestas.
 
 -
   id: ides
@@ -92,39 +83,8 @@
     leo. Quisque laoreet risus quis tortor maximus malesuada. Proin in
     eleifend diam.
 
+
 # Other themes
-
--
-  id: stdlib
-  name: Standard library maintenance
-  team: libs
-  pitch: >
-    Nullam semper euismod arcu et convallis. Sed fermentum, tellus vel
-    bibendum ullamcorper, mauris velit sodales diam, a efficitur
-    tortor massa sit amet libero. Maecenas at enim eros. Vestibulum
-    luctus pellentesque lorem, tristique commodo massa congue
-    vitae. Pellentesque ullamcorper euismod ante at bibendum. Sed quis
-    semper nibh. Aenean porta ligula eget est rhoncus, auctor sodales
-    augue hendrerit.
-
--
-  id: perf
-  name: Performance
-  team: compiler
-  pitch: >
-    Vivamus luctus dui dolor, eget congue nunc mattis eget. Aenean at
-    mi in nisi commodo rhoncus vel a arcu. Fusce condimentum augue at
-    ligula tempus fermentum. Praesent hendrerit ligula nisl, nec
-    elementum justo euismod at. Aenean lacinia leo ipsum, vitae
-    laoreet nisl rutrum et. Morbi a dolor id sem congue
-    sagittis. Vestibulum eu eros dignissim, mattis sapien ac,
-    imperdiet dui. Fusce volutpat, sem eu eleifend ornare, sapien
-    sapien congue mi, non malesuada nulla nibh sit amet
-    felis. Pellentesque pellentesque libero in velit pulvinar, vel
-    vestibulum felis iaculis. Fusce urna massa, ornare eu turpis in,
-    hendrerit ultricies leo. Suspendisse porttitor rutrum nunc. Nulla
-    consequat nunc a tristique scelerisque. Suspendisse nec sodales
-    tortor. Suspendisse iaculis tincidunt leo ac egestas.
 
 -
   id: community
@@ -160,40 +120,6 @@
     vulputate sem.
 
 -
-  id: homu.io
-  name: homu.io adoption
-  team: community
-  pitch: >
-    Morbi libero risus, molestie non volutpat ac, laoreet in
-    est. Maecenas vitae laoreet sem. Aenean ut lectus at lectus
-    malesuada viverra quis aliquam massa. Nam vel elit semper, luctus
-    dui dictum, venenatis metus. Aliquam rhoncus felis enim, non
-    consectetur ex malesuada quis. Etiam dapibus, lacus quis tincidunt
-    aliquet, mi neque ultrices ante, nec aliquet tellus ipsum a
-    est. Sed sit amet nisi tortor. Maecenas gravida, dui at pulvinar
-    pharetra, augue ex consectetur risus, vitae pellentesque ex sem
-    vitae massa. Integer sed velit ultricies velit varius
-    pretium. Nullam quis faucibus nisi.
-
--
-  id: book2
-  name: Book rewrite
-  team: docs
-  pitch: >
-    Nam ac erat nisl. Phasellus condimentum cursus nibh a
-    pellentesque. Nullam efficitur felis in massa gravida, ut sagittis
-    justo suscipit. Praesent dignissim ut orci vel laoreet. Proin et
-    urna purus. Aenean eget dolor nec ante lobortis malesuada vel in
-    mauris. Morbi semper consectetur nibh, vitae feugiat risus
-    ullamcorper vitae. Maecenas commodo sed ante molestie
-    venenatis. Vivamus accumsan sapien at metus rutrum, at sagittis
-    nulla interdum. Proin id mauris faucibus, tempor velit sed,
-    aliquet ex. Cras turpis arcu, aliquet sed dolor eget, dapibus
-    tincidunt leo. Cras vitae ligula volutpat, lobortis odio eu,
-    pellentesque arcu. Mauris vel velit turpis. Cras pulvinar dui eget
-    quam ornare, vel dictum nunc aliquet. In at iaculis ex.
-
--
   id: rustfmt
   name: rustfmt
   team: tools
@@ -204,21 +130,6 @@
     pretium eu. Proin mattis ante at sem suscipit interdum. Cras ut
     tellus bibendum, dapibus arcu vel, faucibus sem. Morbi laoreet
     aliquet nunc in egestas.
-
--
-  id: rustbridge
-  name: RustBridge organization
-  team: community
-  pitch: >
-    Vestibulum rutrum ultrices mauris in suscipit. Ut at sollicitudin
-    augue, eu consequat felis. Integer lobortis gravida urna, sit amet
-    venenatis mauris volutpat a. Aliquam id augue commodo leo lobortis
-    ullamcorper a ac dolor. Sed id vulputate augue. Duis blandit
-    fermentum felis, vel vehicula lectus mollis eu. Duis laoreet
-    pretium ex eu ultricies. Mauris dictum ullamcorper augue, ut
-    tristique erat fermentum vitae. Donec quis ante nisl. Sed a
-    imperdiet dui. Aenean a eros egestas, auctor lectus nec, imperdiet
-    lorem.
 
 -
   id: syntax-extensions
