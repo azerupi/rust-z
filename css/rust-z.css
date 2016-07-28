@@ -26,10 +26,6 @@ div#scene.problems div#section-problems {
     display: block;
 }
 
-div#scene.teams div#section-teams {
-    display: block;
-}
-
 div#scene.releases div#section-releases {
     display: block;
 }
@@ -46,7 +42,6 @@ div#scene.all div#section-vision,
 div#scene.all div#section-themes,
 div#scene.all div#section-goals,
 div#scene.all div#section-problems,
-div#scene.all div#section-teams,
 div#scene.all div#section-releases,
 div#scene.all div#section-archive,
 div#scene.all div#section-help {
@@ -96,18 +91,6 @@ div#select.select-goal-{{goal.id}} #section-goals #goal-{{goal.id}} {
 }
 
 div#select.select-goal-{{goal.id}} .details {
-    display: block;
-}
-
-{% endfor %}
-
-{% for team in site.data.teams %}
-
-div#select.select-team-{{team.id}} #section-teams .team {
-    display: none;
-}
-
-div#select.select-team-{{team.id}} #section-teams #team-{{team.id}} {
     display: block;
 }
 

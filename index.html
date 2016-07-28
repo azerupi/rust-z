@@ -11,7 +11,6 @@ layout: incredible
   <span class="scene">themes</span>
   <span class="scene">goals</span>
   <span class="scene">problems</span>
-  <span class="scene">teams</span>
   <span class="scene">releases</span>
   <span class="scene">archive</span>
   <span class="scene">help</span>
@@ -92,10 +91,6 @@ layout: incredible
         {% endfor %}
 
       </div>
-      
-      <div>
-        {% include tag.html type="team" id=theme.team %}
-      </div>
     </div>
 
   {% endfor %}
@@ -145,7 +140,6 @@ layout: incredible
           {% if theme.id != goal.theme %}
             {% continue %}
           {% endif %}
-          {% include tag.html type="team" id=theme.team %}
         {% endfor %}
         {% include tag.html type="release" id=goal.release %}
       </div>
@@ -189,72 +183,9 @@ layout: incredible
           {% if theme.id != problem.theme %}
             {% continue %}
           {% endif %}
-          {% include tag.html type="team" id=theme.team %}
         {% endfor %}
       </div>
     </div>
-
-  {% endfor %}
-
-</div>
-
-<div id="section-teams">
-
-  <h2>Teams</h2>
-
-  <p class="explain-section">
-    Teams are lorem ipsum dolor sit amet, consectetur
-    adipiscing elit. Proin tristique leo ac ipsum finibus
-    egestas. Cras elit tortor, ornare sed arcu non, laoreet egestas
-    justo. Vestibulum a pulvinar nisl. Nullam condimentum, quam in
-    laoreet placerat, risus nunc sodales ipsum, convallis fringilla
-    massa ligula in ante. Suspendisse hendrerit metus vitae tincidunt
-    varius. Nullam tristique varius posuere. Morbi auctor sit amet
-    urna a porttitor. Fusce nisi dolor, tincidunt ut sem id, finibus
-    tincidunt tellus. Aenean suscipit risus orci, in condimentum metus
-    efficitur sit amet. Duis pharetra congue eleifend. Mauris accumsan
-    aliquet mi nec ullamcorper. Lorem ipsum dolor sit amet,
-    consectetur adipiscing elit.
-  </p>
-
-  {% for team in site.data.teams %}
-
-  <div id="team-{{team.id}}" class="team">
-    <h3>
-      {{team.name}}
-      {% include tag.html type="team" id=team.id %}
-    </h3>
-      <div>
-        {% for theme in site.data.themes %}
-          {% if theme.team != team.id %}
-            {% continue %}
-          {% endif %}
-          {% include tag.html type="theme" id=theme.id %}
-        {% endfor %}
-        {% for goal in site.data.goals %}
-          {% for theme in site.data.themes %}
-            {% if theme.team != team.id %}
-              {% continue %}
-            {% endif %}
-            {% if goal.theme != theme.id %}
-              {% break %}
-            {% endif %}
-            {% include tag.html type="goal" id=goal.id %}
-          {% endfor %}
-        {% endfor %}
-        {% for problem in site.data.problems %}
-          {% for theme in site.data.themes %}
-            {% if theme.team != team.id %}
-              {% continue %}
-            {% endif %}
-            {% if problem.theme != theme.id %}
-              {% break %}
-            {% endif %}
-            {% include tag.html type="problem" id=problem.id %}
-          {% endfor %}
-        {% endfor %}
-      </div>
-  </div>
 
   {% endfor %}
 
@@ -341,10 +272,6 @@ layout: incredible
 
     <li><em>Features</em>
 
-    <li><em>Teams</em> are ...
-      Teams are indicated with fearless blue
-      <span class="tag tag-team">team</span>
-      tags.
   </ul>
 
   <h3>How to help</h3>
