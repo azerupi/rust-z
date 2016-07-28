@@ -6,10 +6,10 @@
 # contributors to the most important areas of improvement, and to get
 # both excited about the direction.
 #
-# They are divided into 'top' battlefronts, and all the others.  The
-# number of top battlefronts should be few because they will be
+# They are divided into 'top' themes, and all the others.  The
+# number of top themes should be few because they will be
 # presented to the reader in the default view. *Subjects that we talk
-# about to sell Rust are top battlefronts*. Everything else is not,
+# about to sell Rust are top themes*. Everything else is not,
 # but may be used to organize other work.
 #
 # The pitch should justify itself in the context of the broader
@@ -17,7 +17,7 @@
 # opportunity to mention long term goals that may not be directly
 # represented in the battleplan. It can include links to critical
 # context. They are listed in the priority order, where the priority
-# should focus on the most active, exciting battlefronts, and those in
+# should focus on the most active, exciting themes, and those in
 # the most need of contributions.
 
 -
@@ -92,7 +92,7 @@
     leo. Quisque laoreet risus quis tortor maximus malesuada. Proin in
     eleifend diam.
 
-# Other battlefronts
+# Other themes
 
 -
   id: stdlib
@@ -237,7 +237,7 @@
 
 -
   id: TODO
-  name: Campaigns without battlefronts can go here temporarily
+  name: Campaigns without themes can go here temporarily
   team: core
   pitch: >
     Pellentesque habitant morbi tristique senectus et netus et

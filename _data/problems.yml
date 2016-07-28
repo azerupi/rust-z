@@ -12,7 +12,7 @@
     parturient montes, nascetur ridiculus mus. Nullam suscipit metus
     et nulla aliquam, venenatis maximus nisl laoreet.
   # campaign-deps: [std-aware-cargo]
-  battlefront: cross
+  theme: cross
 
 -
   id: rustup-ide-support
@@ -25,7 +25,7 @@
     orci. Cum sociis natoque penatibus et magnis dis parturient
     montes, nascetur ridiculus mus. Praesent sed accumsan
     lectus. Nulla ut dolor maximus, bibendum neque quis, dapibus arcu.
-  battlefront: ides
+  theme: ides
 
 -
   id: rand-crate
@@ -38,7 +38,7 @@
     orci. Cum sociis natoque penatibus et magnis dis parturient
     montes, nascetur ridiculus mus. Praesent sed accumsan
     lectus. Nulla ut dolor maximus, bibendum neque quis, dapibus arcu.
-  battlefront: TODO
+  theme: TODO
 
 -
   id: avr-backend
@@ -57,7 +57,7 @@
     elit. Suspendisse lacinia commodo leo sit amet viverra. Morbi
     mattis ornare dui, ut malesuada justo lacinia non. Etiam pharetra
     ex eu sem mollis sagittis.
-  battlefront: cross
+  theme: cross
 
 -
   id: work-with-lld
@@ -68,7 +68,7 @@
     condimentum a. Sed cursus malesuada urna sit amet semper. In hac
     habitasse platea dictumst. Curabitur ac iaculis lectus, quis
     volutpat est.
-  battlefront: cross
+  theme: cross
 
 -
   id: feature-configuration
@@ -86,7 +86,7 @@
     ligula hendrerit. Aliquam vehicula mauris eu magna fringilla,
     condimentum congue lacus accumsan. Cras libero nisi, aliquam sed
     elementum sit amet, tempus vitae justo.
-  battlefront: TODO
+  theme: TODO
 
 -
   id: rustup-linux-arm-ndk
@@ -102,7 +102,7 @@
     venenatis. Phasellus at venenatis libero. Vestibulum rutrum
     iaculis erat ut eleifend. Praesent fermentum elit bibendum metus
     lacinia hendrerit. Praesent pellentesque laoreet quam at volutpat.
-  battlefront: cross
+  theme: cross
 
 -
   id: rustup-osx-ndk
@@ -123,7 +123,7 @@
     dapibus nisi pellentesque vel. Suspendisse potenti. Phasellus
     iaculis urna nec pellentesque maximus. Vestibulum dictum nulla
     eros.
-  battlefront: cross
+  theme: cross
 
 -
   id: cross-testing
@@ -139,7 +139,7 @@
     eros consectetur cursus. Curabitur et metus ac metus sodales porta
     ut sit amet eros. Nunc sit amet ante quam. Nam finibus quam a
     sapien lacinia bibendum.
-  battlefront: cross
+  theme: cross
 
 -
   id: linux-to-32-bit-windows
@@ -156,7 +156,7 @@
     leo. Nullam mi nisl, aliquet sed pretium ac, egestas imperdiet
     risus. Vivamus non neque imperdiet, sodales risus sit amet, auctor
     metus. Vivamus sit amet placerat felis.
-  battlefront: cross
+  theme: cross
 
 -
   id: linker-independence
@@ -167,7 +167,7 @@
     vel hendrerit leo. Donec eget elit quam. Phasellus eget tortor
     molestie, sagittis sapien eget, rhoncus eros. Cum sociis natoque
     penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-  battlefront: TODO
+  theme: TODO
 
 -
   id: infra-security
@@ -181,4 +181,4 @@
     eros at lacus aliquet interdum. Duis facilisis eleifend ex sit
     amet fermentum. Nulla tristique orci lacus, sed maximus leo
     gravida at. Sed nec elementum turpis.
-  battlefront: TODO
+  theme: TODO

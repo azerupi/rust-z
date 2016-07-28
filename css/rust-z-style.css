@@ -1,5 +1,5 @@
 html {
-    --battlefront-color: red;
+    --theme-color: red;
     --campaign-color: green;
     --problem-color: purple;
     --team-color: blue;
@@ -32,8 +32,8 @@ div#section-cta > h2 {
     border-color: var(--system-color);
 }
 
-div#section-battlefronts > h2 {
-    border-color: var(--battlefront-color);
+div#section-themes > h2 {
+    border-color: var(--theme-color);
 }
 
 div#section-campaigns > h2 {
@@ -90,8 +90,8 @@ h3 .tag {
     text-decoration: none;
 }
 
-.tag-battlefront {
-    border-color: var(--battlefront-color);
+.tag-theme {
+    border-color: var(--theme-color);
 }
 
 .tag-campaign {

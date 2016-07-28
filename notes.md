@@ -60,3 +60,8 @@ Cross compilation
 *not* MIR
 Compiler performance
 Incremental compilation
+
+cta -> vision statement
+battlefront -> theme
+campaign -> goal
+valhalla -> archive

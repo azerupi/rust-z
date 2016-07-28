@@ -28,7 +28,7 @@
     lorem dolor, consequat nec massa id, posuere fringilla
     lectus. Aenean vestibulum euismod congue.
   top: true
-  battlefront: cross
+  theme: cross
   tracking-link: TODO
   release: "1.13"
   # tasks: tbd
@@ -45,7 +45,7 @@
      neque id nisi viverra, nec ornare velit cursus. Nunc sed commodo
      dolor.
   top: true
-  battlefront: cross
+  theme: cross
   tracking-link: TODO
   release: "1.15"
   # tasks: std-aware cargo RFC, rustup component install,
@@ -66,7 +66,7 @@
      risus blandit elementum. Donec lobortis turpis ut elit tempor
      gravida. Morbi tincidunt urna risus, a posuere lorem egestas in.
   top: true
-  battlefront: cross
+  theme: cross
   tracking-link: TODO
   release: "1.15"
   # tasks: update Rust LLVM fork, update emscripten LLVM fork
@@ -88,7 +88,7 @@
      luctus, rutrum dolor sit amet, porta velit. Curabitur nec ex
      eros. Morbi id metus eget sapien faucibus blandit.
   top: true
-  battlefront: cross
+  theme: cross
   tracking-link: TODO
   release: "1.15"
 
@@ -105,7 +105,7 @@
     fermentum leo. Aliquam interdum, nisl vitae sodales aliquam, nisl
     nibh hendrerit neque, vel efficitur risus felis quis sapien. Etiam
     viverra ligula luctus lectus mollis ultrices eget nec dolor.
-  battlefront: cross
+  theme: cross
   tracking-link: https://github.com/rust-lang/rust/issues/33205
   release: TBD
 
@@ -128,7 +128,7 @@
     porta. Quisque tristique nisi et diam pulvinar, non efficitur elit
     aliquam.
   top: true
-  battlefront: rustfmt
+  theme: rustfmt
   tracking-link: TODO
   release: TBD
 
@@ -148,7 +148,7 @@
     tortor vitae ante dictum varius nec lobortis massa. Duis
     tincidunt, dolor ut venenatis ultrices, turpis ligula viverra
     odio, eu sollicitudin ipsum diam vel mi.
-  battlefront: TODO
+  theme: TODO
   tracking-link: https://github.com/rust-lang/rust/issues/20630
   release: TBD
 
@@ -166,7 +166,7 @@
     egestas. Morbi posuere libero urna, eu consequat orci rutrum
     id. Cras sed maximus ex. Interdum et malesuada fames ac ante ipsum
     primis in faucibus.
-  battlefront: TODO
+  theme: TODO
   tracking-link: TODO
   release: TBD
 
@@ -180,7 +180,7 @@
     ultrices erat blandit nec. Nunc sollicitudin interdum justo in
     luctus. Maecenas nec pretium tortor. Mauris lacinia sapien vitae
     risus vulputate pharetra.
-  battlefront: TODO
+  theme: TODO
   tracking-link: TODO
   release: TBD
 
@@ -195,7 +195,7 @@
     ex. Nullam ultricies, nisl eu mattis congue, dolor sapien
     efficitur nunc, a molestie arcu dui a turpis. Pellentesque ac
     auctor sem, ac sodales nunc. Morbi ac enim dui.
-  battlefront: TODO
+  theme: TODO
   tracking-link: TODO
   release: TBD
 
@@ -213,7 +213,7 @@
     semper, turpis orci consectetur ipsum, in egestas arcu risus eu
     quam. Interdum et malesuada fames ac ante ipsum primis in
     faucibus.
-  battlefront: TODO
+  theme: TODO
   tracking-link: TODO
   release: TBD
 
@@ -234,7 +234,7 @@
     semper, turpis orci consectetur ipsum, in egestas arcu risus eu
     quam. Interdum et malesuada fames ac ante ipsum primis in
     faucibus.
-  battlefront: lang
+  theme: lang
   top: true
   tracking-link: https://github.com/rust-lang/rust/issues/31436
   release: TBD
@@ -253,7 +253,7 @@
     semper, turpis orci consectetur ipsum, in egestas arcu risus eu
     quam. Interdum et malesuada fames ac ante ipsum primis in
     faucibus.
-  battlefront: lang
+  theme: lang
   top: true
   tracking-link: https://github.com/rust-lang/rust/issues/34511
   release: TBD
@@ -274,7 +274,7 @@
     vehicula ante eu tortor imperdiet, eget viverra est
     dictum. Vivamus euismod sodales leo eget condimentum.
   top: true
-  battlefront: mir
+  theme: mir
   tracking-link: TODO
   release: TBD
 
@@ -294,7 +294,7 @@
     feugiat. Proin semper lacus feugiat neque semper, vel eleifend
     ipsum volutpat. In hendrerit efficitur velit vitae feugiat.
   top: true
-  battlefront: mir
+  theme: mir
   tracking-link: TODO
   release: TBD
 
@@ -316,7 +316,7 @@
     feugiat. Proin semper lacus feugiat neque semper, vel eleifend
     ipsum volutpat. In hendrerit efficitur velit vitae feugiat.
   top: true
-  battlefront: ergonomics
+  theme: ergonomics
   tracking-link: https://github.com/rust-lang/rust/issues/34826
   release: TBD
 
@@ -336,7 +336,7 @@
     feugiat. Proin semper lacus feugiat neque semper, vel eleifend
     ipsum volutpat. In hendrerit efficitur velit vitae feugiat.
   top: true
-  battlefront: ergonomics
+  theme: ergonomics
   tracking-link: https://github.com/rust-lang/rust/issues/34827
   release: TBD
 
@@ -359,7 +359,7 @@
     rutrum. Fusce non lectus scelerisque, tristique eros et, tempor
     massa.
   top: true
-  battlefront: syntax-extensions
+  theme: syntax-extensions
   tracking-link: TODO
   release: TBD
   # task https://github.com/rust-lang/rfcs/pull/1566

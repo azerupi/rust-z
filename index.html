@@ -8,7 +8,7 @@ layout: incredible
 <div id="section-controls">
   <span id="scene-overview" class="scene">overview</span>
   &nbsp;|&nbsp;
-  <span class="scene">battlefronts</span>
+  <span class="scene">themes</span>
   <span class="scene">campaigns</span>
   <span class="scene">problems</span>
   <span class="scene">teams</span>
@@ -30,12 +30,12 @@ layout: incredible
 
 </div>
 
-<div id="section-battlefronts">
+<div id="section-themes">
 
-  <h2>Battlefronts</h2>
+  <h2>Themes</h2>
 
   <p class="explain-section">
-    Battlefronts are lorem ipsum dolor sit amet, consectetur
+    Themes are lorem ipsum dolor sit amet, consectetur
     adipiscing elit. Proin tristique leo ac ipsum finibus
     egestas. Cras elit tortor, ornare sed arcu non, laoreet egestas
     justo. Vestibulum a pulvinar nisl. Nullam condimentum, quam in
@@ -49,25 +49,25 @@ layout: incredible
     consectetur adipiscing elit.
   </p>
 
-  {% for battlefront in site.data.battlefronts %}
+  {% for theme in site.data.themes %}
 
-    {% if battlefront.top %}
+    {% if theme.top %}
       {% assign top-class = "top" %}
     {% else %}
       {% assign top-class = "bottom" %}
     {% endif %}
 
-    <div id="battlefront-{{battlefront.id}}"
-        class="battlefront {{top-class}}">
+    <div id="theme-{{theme.id}}"
+        class="theme {{top-class}}">
       <h3>
-        {{battlefront.name}}
-        {% include tag.html type="battlefront" id=battlefront.id %} <-- click for details
+        {{theme.name}}
+        {% include tag.html type="theme" id=theme.id %} <-- click for details
       </h3>
-      <div>{{ battlefront.pitch | markdownify }}</div>
+      <div>{{ theme.pitch | markdownify }}</div>
 
       <div>
         {% for campaign in site.data.campaigns %}
-          {% if campaign.battlefront != battlefront.id %}
+          {% if campaign.theme != theme.id %}
             {% continue %}
           {% endif %}
 
@@ -94,7 +94,7 @@ layout: incredible
       </div>
       
       <div>
-        {% include tag.html type="team" id=battlefront.team %}
+        {% include tag.html type="team" id=theme.team %}
       </div>
     </div>
 
@@ -130,7 +130,7 @@ layout: incredible
     {% endif %}
 
     <div id="campaign-{{campaign.id}}"
-        class="campaign battlefront-{{campaign.battlefront}} {{top-class}}">
+        class="campaign theme-{{campaign.theme}} {{top-class}}">
       <h3>
         {{campaign.goal}}
         {% include tag.html type="campaign" id=campaign.id %} <-- click for details
@@ -140,12 +140,12 @@ layout: incredible
       {% include campaign-details.html id=campaign.id %}
 
       <div>
-        {% include tag.html type="battlefront" id=campaign.battlefront %}
-        {% for battlefront in site.data.battlefronts %}
-          {% if battlefront.id != campaign.battlefront %}
+        {% include tag.html type="theme" id=campaign.theme %}
+        {% for theme in site.data.themes %}
+          {% if theme.id != campaign.theme %}
             {% continue %}
           {% endif %}
-          {% include tag.html type="team" id=battlefront.team %}
+          {% include tag.html type="team" id=theme.team %}
         {% endfor %}
         {% include tag.html type="release" id=campaign.release %}
       </div>
@@ -184,12 +184,12 @@ layout: incredible
       <div><em>Links: TODO</em></div>
 
       <div>
-        {% include tag.html type="battlefront" id=problem.battlefront %}
-        {% for battlefront in site.data.battlefronts %}
-          {% if battlefront.id != problem.battlefront %}
+        {% include tag.html type="theme" id=problem.theme %}
+        {% for theme in site.data.themes %}
+          {% if theme.id != problem.theme %}
             {% continue %}
           {% endif %}
-          {% include tag.html type="team" id=battlefront.team %}
+          {% include tag.html type="team" id=theme.team %}
         {% endfor %}
       </div>
     </div>
@@ -225,29 +225,29 @@ layout: incredible
       {% include tag.html type="team" id=team.id %}
     </h3>
       <div>
-        {% for battlefront in site.data.battlefronts %}
-          {% if battlefront.team != team.id %}
+        {% for theme in site.data.themes %}
+          {% if theme.team != team.id %}
             {% continue %}
           {% endif %}
-          {% include tag.html type="battlefront" id=battlefront.id %}
+          {% include tag.html type="theme" id=theme.id %}
         {% endfor %}
         {% for campaign in site.data.campaigns %}
-          {% for battlefront in site.data.battlefronts %}
-            {% if battlefront.team != team.id %}
+          {% for theme in site.data.themes %}
+            {% if theme.team != team.id %}
               {% continue %}
             {% endif %}
-            {% if campaign.battlefront != battlefront.id %}
+            {% if campaign.theme != theme.id %}
               {% break %}
             {% endif %}
             {% include tag.html type="campaign" id=campaign.id %}
           {% endfor %}
         {% endfor %}
         {% for problem in site.data.problems %}
-          {% for battlefront in site.data.battlefronts %}
-            {% if battlefront.team != team.id %}
+          {% for theme in site.data.themes %}
+            {% if theme.team != team.id %}
               {% continue %}
             {% endif %}
-            {% if problem.battlefront != battlefront.id %}
+            {% if problem.theme != theme.id %}
               {% break %}
             {% endif %}
             {% include tag.html type="problem" id=problem.id %}
@@ -320,9 +320,9 @@ layout: incredible
   <h3>Important concepts</h3>
 
   <ul>
-    <li><em>Battlefronts</em> are ...
-      Battlefronts are indicated with the indomitable red
-      <span class="tag tag-battlefront">battlefront</span>
+    <li><em>Themes</em> are ...
+      Themes are indicated with the indomitable red
+      <span class="tag tag-theme">theme</span>
       tags.
 
     <li><em>Campaigns</em> are ...

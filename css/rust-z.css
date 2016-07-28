@@ -10,11 +10,11 @@ div#scene > div#section-controls {
 }
 
 div#scene.overview div#section-cta,
-div#scene.overview div#section-battlefronts {
+div#scene.overview div#section-themes {
     display: block;
 }
 
-div#scene.battlefronts div#section-battlefronts {
+div#scene.themes div#section-themes {
     display: block;
 }
 
@@ -43,7 +43,7 @@ div#scene.help div#section-help {
 }
 
 div#scene.all div#section-cta,
-div#scene.all div#section-battlefronts,
+div#scene.all div#section-themes,
 div#scene.all div#section-campaigns,
 div#scene.all div#section-problems,
 div#scene.all div#section-teams,
@@ -55,13 +55,13 @@ div#scene.all div#section-help {
 
 /* ?filter-* URLs */
 
-{% for battlefront in site.data.battlefronts %}
+{% for theme in site.data.themes %}
 
-div#filter.filter-battlefront-{{battlefront.id}} #section-campaigns .campaign {
+div#filter.filter-theme-{{theme.id}} #section-campaigns .campaign {
     display: none;
 }
 
-div#filter.filter-battlefront-{{battlefront.id}} #section-campaigns .battlefront-{{battlefront.id}} {
+div#filter.filter-theme-{{theme.id}} #section-campaigns .theme-{{theme.id}} {
     display: block;
 }
 
@@ -69,17 +69,17 @@ div#filter.filter-battlefront-{{battlefront.id}} #section-campaigns .battlefront
 
 /* ?select-* URLs */
 
-{% for battlefront in site.data.battlefronts %}
+{% for theme in site.data.themes %}
 
-div#select.select-battlefront-{{battlefront.id}} #section-battlefronts .battlefront {
+div#select.select-theme-{{theme.id}} #section-themes .theme {
     display: none;
 }
 
-div#select.select-battlefront-{{battlefront.id}} #section-battlefronts #battlefront-{{battlefront.id}} {
+div#select.select-theme-{{theme.id}} #section-themes #theme-{{theme.id}} {
     display: block;
 }
 
-div#select.select-battlefront-{{battlefront.id}} .details {
+div#select.select-theme-{{theme.id}} .details {
     display: block;
 }
 
